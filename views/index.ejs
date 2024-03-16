@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+    <form action="/file" method="post">
+      <input type="text" placeholder="enter filename with extension" name="filecreate">
+    </form>
+    <hr>
+    <ul>
+     <% files.forEach(function(file,index){ %>
+<li>
+  <a href="/feel/<%= file %>"><%= file %></a>
+</li>
+     <% }) %>
+    </ul>
+  </div>
+  <div class="right">
+    <form action="">
+     <textarea cols="30" rows="10"> <%= filedata%></textarea>
+    </form>
+  </div>
+  </div>
+</body>
+
+</html>
