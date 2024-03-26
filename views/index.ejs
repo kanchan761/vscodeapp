@@ -17,13 +17,15 @@
      <% files.forEach(function(file,index){ %>
 <li>
   <a href="/feel/<%= file %>"><%= file %></a>
+  <a href="/delet/<%= file%>">❌</a>
 </li>
      <% }) %>
     </ul>
   </div>
   <div class="right">
-    <form action="">
-     <textarea cols="30" rows="10"> <%= filedata%></textarea>
+    <form action="/update/<%= filename %>" method= "post">
+     <textarea name="filedata" cols="30" rows="10"> <%= filedata%></textarea><br><br>
+     <button>save</button>
     </form>
   </div>
   </div>
